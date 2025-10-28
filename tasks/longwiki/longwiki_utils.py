@@ -168,4 +168,3 @@ def jsonify_ans(raw_responses, eval_prompts, evaluator, key):
                 print("<<< PASS >>>")
 
     return jsonifyed_res
-
