@@ -120,6 +120,7 @@ def model_eval_step(evaluator, prompts, max_token=512, batch_size=16, max_worker
 def jsonify_ans(raw_responses, eval_prompts, evaluator, key):
 
     def check_validity(gen):
+        gen = gen.replace(" ", "").lower()
         if '{{"{}":false}}'.format(key) in gen.lower():
             return '{{"{}":false}}'.format(key)
         elif '{{"{}":true}}'.format(key) in gen.lower():
