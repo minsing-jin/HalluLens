@@ -127,7 +127,7 @@ def jsonify_ans(raw_responses, eval_prompts, evaluator, key):
             return '{{"{}":true}}'.format(key)
         else:
             return -1
-        
+
     jsonifyed_res  = []
     for r, p in zip(raw_responses, eval_prompts):
         
@@ -168,3 +168,4 @@ def jsonify_ans(raw_responses, eval_prompts, evaluator, key):
                 print("<<< PASS >>>")
 
     return jsonifyed_res
+
